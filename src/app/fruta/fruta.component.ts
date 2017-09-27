@@ -35,13 +35,13 @@ export class FrutaComponent {
     var uno = 8;
     var dos = 15;
     
-    if(uno == 8) {
+    if(uno === 8) {
       let uno = 3;
       var dos = 88;
       
       console.log('DENTRO DEL IF: ' + uno);
     }
-    console.log('DENTRO DEL IF: ' + uno);
+    console.log('FUERA DEL IF: ' + uno);
   }
 
   cambiarNombre() {
