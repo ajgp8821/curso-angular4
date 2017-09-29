@@ -28,3 +28,46 @@
     <li *ngIf="empleado.contratado == false">Contratado: No está contratado</li>
   </ul>
 </div>
+
+<hr>
+
+<h3>Listado de trabajadores</h3>
+<ul>
+  <li *ngFor="let trabajador of trabajadores; let i = index">
+    <strong>Empleado {{i+1}}:</strong>
+    <ul>
+      <li>Nombre: {{trabajador.nombre}}</li>
+      <li>Edad: {{trabajador.edad}}</li>
+      <li>Cargo: {{trabajador.cargo}}</li>
+      <li *ngIf="trabajador.contratado == true">Contratado: Está contratado</li>
+      <li *ngIf="trabajador.contratado == false">Contratado: No está contratado</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h3>Colores switch</h3>
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'red'" [ngStyle]="{
+    background:color,
+    color:'white',
+    padding:'20px'
+  }">
+    Es de color ROJO
+  </li>
+  <li *ngSwitchCase="'green'" [ngStyle]="{
+    background:color,
+    color:'white',
+    padding:'20px'
+  }">
+    Es de color VERDE
+  </li>
+  <li *ngSwitchCase="'blue'" [ngStyle]="{
+    background:color,
+    color:'white',
+    padding:'20px'
+  }">
+    Es de color AZUL
+  </li>
+</ul>

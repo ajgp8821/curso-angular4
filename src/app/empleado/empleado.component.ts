@@ -13,6 +13,7 @@ export class EmpleadoComponent {
   public empleado: Empleado;
   public trabajadores: Array<Empleado>;
   public trabajadorExterno:boolean;
+  public color:string;
 
   constructor() {
     this.empleado = new Empleado('Alejandro Gil', 28, 'Líder', true);
@@ -23,6 +24,7 @@ export class EmpleadoComponent {
     ];
 
     this.trabajadorExterno = false;
+    this.color = 'blue';
   }
 
   ngOnInit() {
