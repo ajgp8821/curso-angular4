@@ -71,3 +71,30 @@
     Es de color AZUL
   </li>
 </ul>
+
+<hr>
+
+<h3>Selector de colores:</h3>
+<button (click)="logColorSeleccionado()" >MOSTRAR LOG</button>
+<input type="text" [(ngModel)]="colorSeleccionado" >
+<br>
+<select name="colorS" id="colorS" [(ngModel)]="colorSeleccionado">
+  <option value="" >...</option>
+  <option value="green" [ngStyle]="{'background-color':'green', 'color':'white'}">Verde</option>
+  <option value="blue" [ngStyle]="{'background-color':'blue', 'color':'white'}">Azul</option>
+  <option value="pink" [ngStyle]="{'background-color':'pink', 'color':'white'}">Rosado</option>
+  <option value="red" [ngStyle]="{'background-color':'red', 'color':'white'}">Rojo</option>
+  <option value="black" [ngStyle]="{'background-color':'black', 'color':'white'}">Negro</option>
+</select>
+<pre>
+  <strong>Color elegido:</strong>
+  {{colorSeleccionado}}
+</pre>
+<div [ngStyle]="{
+  'background':colorSeleccionado,
+  'width':'200px',
+  'height':'200px',
+  'float':'right',
+  'margin-right': '70%'
+}"></div>
+<div style="clear: both"></div>
