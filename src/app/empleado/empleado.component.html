@@ -86,7 +86,14 @@
   <option value="red" [ngStyle]="{'background-color':'red', 'color':'white'}">Rojo</option>
   <option value="black" [ngStyle]="{'background-color':'black', 'color':'white'}">Negro</option>
 </select>
-<pre>
+<pre 
+  [style.border]="colorSeleccionado == 'red' ? '5px solid black' : '1px solid yellow'" 
+  [ngClass]="{
+    fondoAzul: colorSeleccionado == 'blue',
+    fondoVerde: colorSeleccionado == 'green',
+    letraGrande: 1 == 1
+  }"
+>
   <strong>Color elegido:</strong>
   {{colorSeleccionado}}
 </pre>
@@ -96,5 +103,5 @@
   'height':'200px',
   'float':'right',
   'margin-right': '70%'
-}"></div>
+}" [style.border]="colorSeleccionado == 'red' ? '5px solid black' : '1px solid yellow'"></div>
 <div style="clear: both"></div>
