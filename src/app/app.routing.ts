@@ -4,13 +4,17 @@ import { Routes, RouterModule } from '@angular/router';
 // Importar componentes
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { FrutaComponent } from './fruta/fruta.component';
+import { HomeComponent } from './home/home.component';
+import { ContactoComponent} from './contacto/contacto.component';
 
 // Configuracion de las rutas
 const appRoutes: Routes = [
-    {path: '', component: EmpleadoComponent}, // Ruta inicial
+    {path: '', component: HomeComponent}, // Ruta inicial
     {path: 'empleado', component: EmpleadoComponent},
     {path: 'fruta', component: FrutaComponent},
-    {path: '**', component: EmpleadoComponent} // Si la ruta no existe
+    {path: 'home', component: HomeComponent},
+    {path: 'contacto', component: ContactoComponent},
+    {path: '**', component: HomeComponent} // Si la ruta no existe
 ];
 
 // Lo usa Angular para cargar el provider de las rutas

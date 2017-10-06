@@ -20,8 +20,26 @@
     <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
   </li>
 </ul>-->
-<hr>    
 <!--<app-fruta></app-fruta>-->
 <!-- <app-empleado></app-empleado> -->
+<hr>
+<nav>
+  <a [routerLink]="['/home']" >
+    Home
+  </a>
+  -
+  <a [routerLink]="['/fruta']" >
+    Fruta
+  </a>
+  -
+  <a [routerLink]="['/empleado']" >
+    Empleado
+  </a>
+  -
+  <a [routerLink]="['/contacto']" >
+    Contacto
+  </a>
+</nav>
+<hr>
 <router-outlet></router-outlet> <!-- carga el componente a la ruta -->
 
