@@ -14,6 +14,7 @@ const appRoutes: Routes = [
     {path: 'fruta', component: FrutaComponent},
     {path: 'home', component: HomeComponent},
     {path: 'contacto', component: ContactoComponent},
+    {path: 'contacto/:page', component: ContactoComponent},
     {path: '**', component: HomeComponent} // Si la ruta no existe
 ];
 
