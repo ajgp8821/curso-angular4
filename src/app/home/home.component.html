@@ -1,6 +1,25 @@
 <h2> {{ titulo }} </h2>
 
 <br>
+{{fecha}}
+<br>
+{{fecha | date:'fullDate'}}
+<br>
+{{fecha | date:'dd/MM/yy'}}
+<br>
+{{fecha | date:'dd/MM/yyyy'}}
+<br>
+{{nombre}}
+<br>
+{{nombre | uppercase}}
+<br>
+{{nombre | lowercase}}
+<br>
+{{ 5 | conversor}}
+<br>
+{{ 5 | conversor: 7}}
+<br>
+<br>
 <input type="text" [(ngModel)]="prendaAGuardar">
 <button (click)="guardarPrenda()" >Añadir prenda</button>
 <p *ngIf="prendaAGuardar" >La prenda a guardar es: <strong>{{prendaAGuardar}}</strong></p>
