@@ -11,6 +11,7 @@ export class CochesComponent{
 
     public coche: Coche;
     public coches: Array<Coche>;
+    public articulos;
 
     constructor(
         private _peticionesService: PeticionesService
@@ -23,6 +24,24 @@ export class CochesComponent{
     }
 
     ngOnInit(){
+        this._peticionesService.getArticulos().subscribe( // Suscribirse al observable y recoger el resultado o error
+            // Capturamos el resultado
+            result =>{
+                // Le asignamos todo el arrego de objetos a articulos
+                this.articulos = result;
+
+                if(!this.articulos){
+                    console.log("Error en es servidor");
+                }
+                // Validamos para saber si funciona
+                //console.log(result);
+            },
+            // Capturamos el error
+            error => {
+                var errorMensaje = <any>error; // Se castea a tipo any
+                console.log(errorMensaje);
+            }
+        );
         console.log(this._peticionesService.getPrueba());
     }
 
