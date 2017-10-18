@@ -50,4 +50,8 @@ export class CochesComponent{
         this.coche = new Coche("", "", "");
         console.log(this.coche);
     }
+
+    eliminarCoche(index:number){
+        this.coches.splice(index, 1);
+    }
 }

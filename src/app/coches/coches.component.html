@@ -47,8 +47,8 @@
 <div class="listado">
     <h4>Lista de coches</h4>
     <ul>
-        <li *ngFor="let coche of coches" >
-            {{coche.nombre}} - {{coche.caballaje}} - {{coche.color}}
+        <li *ngFor="let coche of coches, let i = index" >
+            {{i+1}} - {{coche.nombre}} - {{coche.caballaje}} - {{coche.color}} - <button (click)="eliminarCoche(i)">Eliminar</button>
         </li>
     </ul>
 </div>

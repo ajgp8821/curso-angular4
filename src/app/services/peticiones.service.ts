@@ -11,7 +11,8 @@ export class PeticionesService{
     public url:string;
 
     constructor(private _http:Http){
-        this.url = "https://jsonplaceholder.typicode.com/posts";
+        this.url = "https://reqres.in/api/users?page=2"
+        // this.url = "https://jsonplaceholder.typicode.com/posts";
     }
 
     getPrueba(){
